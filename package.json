@@ -1,0 +1,24 @@
+{
+  "name": "vuepress-plugin-ribbon",
+  "version": "0.0.1",
+  "description": "A vuepress plugin for ribbon.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SigureMo/vuepress-plugin-ribbon.git"
+  },
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "ribbon"
+  ],
+  "author": "SigureMo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SigureMo/vuepress-plugin-ribbon/issues"
+  },
+  "homepage": "https://github.com/SigureMo/vuepress-plugin-ribbon#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
