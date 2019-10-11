@@ -9,7 +9,7 @@
       return {
         canvas: null,
         ctx: null,
-        r: 0,
+        angle: 0,
         config: {
           size: SIZE,
           opacity: OPACITY,
@@ -20,29 +20,32 @@
     mounted() {
       const canvas = this.newCanvas();
       const ctx = canvas.getContext('2d');
-      this.canvas = canvas;
-      this.ctx = ctx;
       ctx.globalAlpha = this.config.opacity;
       document.onclick = this.redraw;
       document.ontouchstart = this.redraw;
+      this.canvas = canvas;
+      this.ctx = ctx;
       this.redraw();
     },
     methods: {
-      draw(i, j, q) {
+      draw(foldMark) {
+        const ctx = this.ctx;
         const pi = Math.PI*2;
         const cos = Math.cos;
         const size = this.config.size;
-        const k = j.x + (Math.random()*2-0.25)*size, n = this.line(j.y);
-        this.ctx.beginPath();
-        this.ctx.moveTo(i.x, i.y);
-        this.ctx.lineTo(j.x, j.y);
-        this.ctx.lineTo(k, n);
-        this.ctx.closePath();
-        this.r -= pi / -50;
-        this.ctx.fillStyle = '#'+(Math.cos(this.r)*127+128<<16 | Math.cos(this.r+pi/3)*127+128<<8 | cos(this.r+pi/3*2)*127+128).toString(16);
-        this.ctx.fill();
-        q[0] = q[1];
-        q[1] = {x: k, y: n};
+        const p1 = foldMark[0];
+        const p2 = foldMark[1];
+        const p3 = {x: p2.x + (Math.random()*2-0.25)*size, y: this.line(p2.y)};
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.lineTo(p3.x, p3.y);
+        ctx.closePath();
+        this.angle -= pi / -50;
+        ctx.fillStyle = '#'+(cos(this.angle)*127+128<<16 | cos(this.angle+pi/3)*127+128<<8 | cos(this.angle+pi/3*2)*127+128).toString(16);
+        ctx.fill();
+        foldMark[0] = p2;
+        foldMark[1] = p3;
       },
       newCanvas() {
         const canvas = document.createElement('canvas');
@@ -57,16 +60,16 @@
         const width = this.canvas.width;
         const height = this.canvas.height;
         const size = this.config.size;
+        const foldMark = [{x: 0, y: height * 0.7 + size}, {x: 0, y: height * 0.7 - size}];
         this.ctx.clearRect(0, 0, width, height);
-        let q = [{x: 0, y: height * 0.7 + size}, {x: 0, y: height * 0.7 - size}];
-        while(q[1].x < width + size) this.draw(q[0], q[1], q);
+        while(foldMark[1].x < width + size) this.draw(foldMark);
       },
-      line(p){
+      line(y){
         const width = this.canvas.width;
         const height = this.canvas.height;
         const size = this.config.size;
-        let t = p + (Math.random() * 2 - 1.1) * size;
-        return (t > height || t < 0) ? this.line(p) : t;
+        let t = y + (Math.random() * 2 - 1.1) * size;
+        return (t > height || t < 0) ? this.line(y) : t;
       },
       canvasStyle(config) {
         return `opacity:${config.opacity};position:fixed;top:0;left:0;z-index:${config.zIndex};width:100%;height:100%;pointer-events:none;`;
