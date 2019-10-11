@@ -1,8 +1,15 @@
 # vuepress-plugin-ribbon
 
-效果展示: [www.sigure.xyz](https://www.sigure.xyz/)
 
-> 由于是第一次写前端这种项目，大多是直接参考其余几个项目完成的，欢迎大家提出改进意见~
+<p align="center">
+   <a href="https://www.npmjs.com/package/vuepress-plugin-ribbon" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-ribbon.svg"></a>
+   <a href="https://github.com/SigureMo/vuepress-plugin-ribbon/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/SigureMo/vuepress-plugin-ribbon"></a>
+   <a href="https://github.com/SigureMo/vuepress-plugin-ribbon/blob/master/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/SigureMo/vuepress-plugin-ribbon"></a>
+</p>
+
+> 由于是第一次写前端项目，大多是直接参考其余几个项目完成的，欢迎大家提出改进意见~
+
+效果展示: [www.sigure.xyz](https://www.sigure.xyz/)
 
 ## 安装
 
