@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-ribbon",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A vuepress plugin for ribbon.js",
   "main": "index.js",
   "repository": {
@@ -19,6 +19,13 @@
   },
   "homepage": "https://github.com/SigureMo/vuepress-plugin-ribbon#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "devDependencies": {
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-ribbon": "^0.0.4"
   }
 }
