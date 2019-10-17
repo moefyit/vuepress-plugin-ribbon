@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-ribbon",
-  "version": "0.0.6-alpha.2",
+  "version": "0.0.6-alpha.3",
   "description": "A vuepress plugin for ribbon.js",
   "main": "index.js",
   "repository": {
@@ -12,6 +12,13 @@
     "plugin",
     "ribbon"
   ],
+  "files": [
+    "index.js",
+    "Ribbon.vue",
+	  "enhanceAppFile.js",
+    "package.json",
+    "README.md"
+	],
   "author": "SigureMo",
   "license": "MIT",
   "bugs": {
