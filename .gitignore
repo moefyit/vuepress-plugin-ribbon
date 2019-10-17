@@ -6,3 +6,6 @@
 
 # node
 node_modules/
+
+# vuepress
+.vuepress/dist/

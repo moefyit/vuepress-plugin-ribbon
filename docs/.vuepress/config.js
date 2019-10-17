@@ -1,6 +1,6 @@
 module.exports = {
   title: "vuepress-plugin-ribbon",
-  description: "A vuepress plugin for canvas-nest.js",
+  description: "A vuepress plugin for ribbon.js",
   base: "/vuepress-plugin-ribbon/",
   head: [
     ["link", { rel: "icon", href: "/ribbon.png" }]

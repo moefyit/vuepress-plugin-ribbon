@@ -1,5 +1,5 @@
 <template>
-  <div class="vuepress-canvas-ribbon-element"></div>
+  <canvas id="vuepress-canvas-ribbon"></canvas>
 </template>
 
 <script>
@@ -18,7 +18,7 @@
       };
     },
     mounted() {
-      const canvas = this.newCanvas();
+      const canvas = this.getCanvas();
       const ctx = canvas.getContext('2d');
       ctx.globalAlpha = this.config.opacity;
       if (this.isMobile()) {
@@ -51,12 +51,10 @@
         foldMark[0] = p2;
         foldMark[1] = p3;
       },
-      newCanvas() {
-        const canvas = document.createElement('canvas');
-        const elm = document.querySelector(".vuepress-canvas-ribbon-element");
-        elm.appendChild(canvas);
-        canvas.width = elm.clientWidth;
-        canvas.height = elm.clientHeight;
+      getCanvas() {
+        const canvas = document.getElementById('vuepress-canvas-ribbon');
+        canvas.width = window.innerWidth,
+        canvas.height = window.innerHeight;
         canvas.style.cssText = this.canvasStyle(this.config);
         return canvas;
       },
@@ -87,16 +85,3 @@
     }
   };
 </script>
-
-<style>
-.vuepress-canvas-ribbon-element {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-}
-</style>

@@ -11,8 +11,6 @@
 - Website: [www.sigure.xyz/vuepress-plugin-ribbon/](https://www.sigure.xyz/vuepress-plugin-ribbon/)
 - MyBlog: [www.sigure.xyz](https://www.sigure.xyz/)
 
-# Get Started!
-
 ## Install
 
 ``` bash
@@ -43,7 +41,7 @@ module.exports = {
 }
 ```
 
-## Refs
+## Thanks
 
 - [vuepress-plugin-nest](https://github.com/vxhly/vuepress-plugin-nest)
 - [canvas-nest.js](https://github.com/hustcc/canvas-nest.js)
