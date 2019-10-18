@@ -1,7 +1,7 @@
 {
   "name": "vuepress-plugin-ribbon",
-  "version": "0.0.6-alpha.3",
-  "description": "A vuepress plugin for ribbon.js",
+  "version": "0.0.6-alpha.4",
+  "description": "Add a beautiful ribbon in your vuepress!",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -15,10 +15,10 @@
   "files": [
     "index.js",
     "Ribbon.vue",
-	  "enhanceAppFile.js",
+    "enhanceAppFile.js",
     "package.json",
     "README.md"
-	],
+  ],
   "author": "SigureMo",
   "license": "MIT",
   "bugs": {
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "vuepress": "^1.2.0",
+    "vuepress-plugin-cursor-effects": "^0.0.1",
     "vuepress-plugin-ribbon": "^0.0.6-alpha.2"
   }
 }
