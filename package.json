@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-ribbon",
-  "version": "0.0.6-alpha.4",
+  "version": "0.0.6",
   "description": "Add a beautiful ribbon in your vuepress!",
   "main": "index.js",
   "repository": {
