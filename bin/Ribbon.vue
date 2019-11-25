@@ -31,8 +31,6 @@
     methods: {
       draw(foldMark) {
         const ctx = this.ctx
-        const pi_2 = Math.PI*2
-        const cos = Math.cos
         const size = this.config.size
         const p1 = foldMark[0]
         const p2 = foldMark[1]
@@ -42,8 +40,7 @@
         ctx.lineTo(p2.x, p2.y)
         ctx.lineTo(p3.x, p3.y)
         ctx.closePath()
-        this.angle += pi_2 * 0.02
-        ctx.fillStyle = '#'+(cos(this.angle)*127+128<<16 | cos(this.angle+pi_2/3)*127+128<<8 | cos(this.angle+pi_2/3*2)*127+128).toString(16)
+        ctx.fillStyle = this.randomColor()
         ctx.fill()
         foldMark[0] = p2
         foldMark[1] = p3
@@ -84,6 +81,15 @@
       rand(start, end) {
         return Math.random() * (end - start) + start
       },
+      randomColor() {
+        const pi_2 = Math.PI*2
+        const cos = Math.cos
+        this.angle += pi_2 * 0.02
+        this.angle %= pi_2
+        let colorString = (cos(this.angle)*127+128<<16 | cos(this.angle+pi_2/3)*127+128<<8 | cos(this.angle+pi_2/3*2)*127+128).toString(16)
+        colorString = colorString.length === 6 ? '#' + colorString : '#' + Array(6-colorString.length+1).join('0') + colorString
+        return colorString
+      },
       isMobile() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       },
@@ -94,6 +100,7 @@
         this.resizeTimeout = setTimeout(() => {
           this.canvas.width  = window.innerWidth
           this.canvas.height = window.innerHeight
+          this.redraw()
         }, 500)
       },
     }
