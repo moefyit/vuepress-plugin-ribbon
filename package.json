@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/SigureMo/vuepress-plugin-ribbon.git"
+    "url": "git+ssh://git@github.com/moefyit/vuepress-plugin-ribbon.git"
   },
   "keywords": [
     "vuepress",
@@ -21,7 +21,7 @@
   "author": "SigureMo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SigureMo/vuepress-plugin-ribbon/issues"
+    "url": "https://github.com/moefyit/vuepress-plugin-ribbon/issues"
   },
-  "homepage": "https://github.com/SigureMo/vuepress-plugin-ribbon#readme"
+  "homepage": "https://github.com/moefyit/vuepress-plugin-ribbon#readme"
 }
