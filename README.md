@@ -1,4 +1,6 @@
-# vuepress-plugin-ribbon
+# vuepress-plugin-ribbon <GitHubLink repo="moefyit/vuepress-plugin-ribbon"/>
+
+:reminder_ribbon: Add a beautiful ribbon to your vuepress!
 
 <p align="center">
    <a href="https://www.npmjs.com/package/vuepress-plugin-ribbon" target="_blank"><img alt="npm" src="https://img.shields.io/npm/v/vuepress-plugin-ribbon.svg"></a>
