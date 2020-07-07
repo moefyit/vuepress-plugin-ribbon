@@ -18,6 +18,7 @@
         }
       }
     },
+
     mounted() {
       const canvas = this.getCanvas()
       const ctx = canvas.getContext('2d')
@@ -28,6 +29,7 @@
       this.ctx = ctx
       this.redraw()
     },
+
     methods: {
       draw(foldMark) {
         const ctx = this.ctx
@@ -40,11 +42,12 @@
         ctx.lineTo(p2.x, p2.y)
         ctx.lineTo(p3.x, p3.y)
         ctx.closePath()
-        ctx.fillStyle = this.randomColor()
+        ctx.fillStyle = this.nextColor()
         ctx.fill()
         foldMark[0] = p2
         foldMark[1] = p3
       },
+
       getCanvas() {
         const canvas = document.getElementById('vuepress-canvas-ribbon')
         canvas.width = window.innerWidth
@@ -52,6 +55,7 @@
         this.setStyle(canvas)
         return canvas
       },
+
       redraw() {
         const width = this.canvas.width
         const height = this.canvas.height
@@ -60,6 +64,7 @@
         this.ctx.clearRect(0, 0, width, height)
         while(foldMark[1].x < width + size) this.draw(foldMark)
       },
+
       nextY(y){
         const width = this.canvas.width
         const height = this.canvas.height
@@ -67,6 +72,7 @@
         const t = y + this.rand(-1.1, 0.9) * size
         return (t > height || t < 0) ? this.nextY(y) : t
       },
+
       setStyle(canvas) {
         const style = canvas.style
         style.opacity = this.config.opacity
@@ -78,24 +84,29 @@
         style.height = canvas.height
         style.pointerEvents = 'none'
       },
+
       rand(start, end) {
         return Math.random() * (end - start) + start
       },
-      randomColor() {
+
+      nextColor() {
         const pi_2 = Math.PI*2
-        const cos = Math.cos
         this.angle += pi_2 * 0.02
         this.angle %= pi_2
-        let colorString = (cos(this.angle)*127+128<<16 | cos(this.angle+pi_2/3)*127+128<<8 | cos(this.angle+pi_2/3*2)*127+128).toString(16)
-        colorString = colorString.length === 6 ? '#' + colorString : '#' + Array(6-colorString.length+1).join('0') + colorString
-        return colorString
+        return "#" + (Math.cos(this.angle)*127+128<<16 |
+                      Math.cos(this.angle+pi_2/3)*127+128<<8 |
+                      Math.cos(this.angle+pi_2/3*2)*127+128)
+                      .toString(16)
+                      .padStart(6, "0")
       },
+
       isMobile() {
         return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
       },
+
       handleResize() {
         if(this.resizeTimeout != null){
-          clearTimeout(this.resizeTimeout);
+          clearTimeout(this.resizeTimeout)
         }
         this.resizeTimeout = setTimeout(() => {
           this.canvas.width  = window.innerWidth
