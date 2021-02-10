@@ -10,12 +10,12 @@
    <a href="https://github.com/moefyit/vuepress-plugin-ribbon/blob/master/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/moefyit/vuepress-plugin-ribbon"></a>
 </p>
 
-- Document: [moefy-vuepress](https://moefyit.github.io/moefy-vuepress/)
-- LiveDemo: [notev](https://www.sigure.xyz/)
+-  Document: [moefy-vuepress](https://moefyit.github.io/moefy-vuepress/)
+-  LiveDemo: [notev](https://www.sigure.xyz/)
 
 ## Install
 
-``` bash
+```bash
 yarn add vuepress-plugin-ribbon -D
 # or use npm
 npm i vuepress-plugin-ribbon -D
@@ -23,31 +23,31 @@ npm i vuepress-plugin-ribbon -D
 
 ## Usage
 
-``` javascript
+```javascript
 module.exports = {
-  plugins: ['ribbon']
+   plugins: ['ribbon'],
 }
 ```
 
 ## Options
 
-``` js
+```js
 module.exports = {
-  plugins: [
-    [
-      "ribbon",
-      {
-        size: 90,     // width of the ribbon, default: 90
-        opacity: 0.8, // opacity of the ribbon, default: 0.3
-        zIndex: -1    // z-index property of the background, default: -1
-      }
-    ]
-  ]
+   plugins: [
+      [
+         'ribbon',
+         {
+            size: 90, // width of the ribbon, default: 90
+            opacity: 0.8, // opacity of the ribbon, default: 0.3
+            zIndex: -1, // z-index property of the background, default: -1
+         },
+      ],
+   ],
 }
 ```
 
 ## Thanks
 
-- [vuepress-plugin-nest](https://github.com/vxhly/vuepress-plugin-nest)
-- [canvas-nest.js](https://github.com/hustcc/canvas-nest.js)
-- [ribbon.js](https://github.com/hustcc/ribbon.js)
+-  [vuepress-plugin-nest](https://github.com/vxhly/vuepress-plugin-nest)
+-  [canvas-nest.js](https://github.com/hustcc/canvas-nest.js)
+-  [ribbon.js](https://github.com/hustcc/ribbon.js)

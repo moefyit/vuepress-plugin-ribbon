@@ -1,7 +1,5 @@
-import Ribbon from "./Ribbon.vue";
+import Ribbon from './Ribbon.vue'
 
-export default ({
-  Vue
-}) => {
-  Vue.component("Ribbon", Ribbon);
-};
+export default ({ Vue }) => {
+  Vue.component('Ribbon', Ribbon)
+}

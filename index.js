@@ -7,10 +7,10 @@ module.exports = (options = {}, context) => ({
     return {
       RIBBON_SIZE: size,
       RIBBON_OPACITY: opacity,
-      RIBBON_Z_INDEX: zIndex
+      RIBBON_Z_INDEX: zIndex,
     }
   },
 
   enhanceAppFiles: resolve(__dirname, './bin/enhanceAppFile.js'),
-  globalUIComponents: 'Ribbon'
+  globalUIComponents: 'Ribbon',
 })
