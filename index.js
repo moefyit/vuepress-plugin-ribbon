@@ -1,12 +1,8 @@
-const {
-  resolve
-} = require('path')
+const { resolve } = require('path')
 
 module.exports = (options = {}, context) => ({
   define() {
-    const {
-      size = 90, opacity = 0.3, zIndex = -1
-    } = options
+    const { size = 90, opacity = 0.3, zIndex = -1 } = optionss
 
     return {
       RIBBON_SIZE: size,
@@ -15,6 +11,6 @@ module.exports = (options = {}, context) => ({
     }
   },
 
-  enhanceAppFiles: resolve(__dirname, "./bin/enhanceAppFile.js"),
-  globalUIComponents: "Ribbon"
-});
+  enhanceAppFiles: resolve(__dirname, './bin/enhanceAppFile.js'),
+  globalUIComponents: 'Ribbon'
+})
