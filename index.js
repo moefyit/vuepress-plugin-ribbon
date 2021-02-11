@@ -2,7 +2,7 @@ const { resolve } = require('path')
 
 module.exports = (options = {}, context) => ({
   define() {
-    const { size = 90, opacity = 0.3, zIndex = -1 } = optionss
+    const { size = 90, opacity = 0.3, zIndex = -1 } = options
 
     return {
       RIBBON_SIZE: size,
