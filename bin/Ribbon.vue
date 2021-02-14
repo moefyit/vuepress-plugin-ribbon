@@ -60,10 +60,11 @@ export default {
     redraw() {
       const width = this.canvas.width
       const height = this.canvas.height
+      const clientHeight = window.innerHeight
       const size = this.config.size
       const foldMark = [
-        { x: 0, y: height * 0.7 + size },
-        { x: 0, y: height * 0.7 - size },
+        { x: 0, y: clientHeight * 0.7 + size },
+        { x: 0, y: clientHeight * 0.7 - size },
       ]
       this.ctx.clearRect(0, 0, width, height)
       while (foldMark[1].x < width + size) this.draw(foldMark)
