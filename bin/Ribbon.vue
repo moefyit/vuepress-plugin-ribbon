@@ -27,6 +27,7 @@ export default {
     window.addEventListener('resize', this.handleResize)
     this.canvas = canvas
     this.ctx = ctx
+    this.makeHighRes(canvas, ctx)
     this.redraw()
   },
 
@@ -88,6 +89,20 @@ export default {
       style.pointerEvents = 'none'
     },
 
+    makeHighRes(canvas, ctx) {
+      const dpr = window.devicePixelRatio || 1
+
+      const oldWidth = canvas.width
+      const oldHeight = canvas.height
+
+      canvas.width = Math.round(oldWidth * dpr)
+      canvas.height = Math.round(oldHeight * dpr)
+      canvas.style.width = oldWidth + 'px'
+      canvas.style.height = oldHeight + 'px'
+
+      ctx.scale(dpr, dpr)
+    },
+
     rand(start, end) {
       return Math.random() * (end - start) + start
     },
@@ -121,6 +136,7 @@ export default {
       this.resizeTimeout = setTimeout(() => {
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
+        this.makeHighRes(this.canvas, this.ctx)
         this.redraw()
       }, 500)
     },
