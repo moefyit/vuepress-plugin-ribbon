@@ -7,7 +7,7 @@
    <a href="https://github.com/moefyit/vuepress-plugin-ribbon/stargazers" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/moefyit/vuepress-plugin-ribbon"></a>
    <a href="https://www.npmjs.com/package/vuepress-plugin-ribbon" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dt/vuepress-plugin-ribbon.svg"></a>
    <a href="https://www.npmjs.com/package/vuepress-plugin-ribbon" target="_blank"><img alt="downloads" src="https://img.shields.io/npm/dm/vuepress-plugin-ribbon.svg"></a>
-   <a href="https://github.com/moefyit/vuepress-plugin-ribbon/blob/master/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/moefyit/vuepress-plugin-ribbon"></a>
+   <a href="https://github.com/moefyit/vuepress-plugin-ribbon/blob/main/LICENSE" target="_blank"><img alt="GitHub license" src="https://img.shields.io/github/license/moefyit/vuepress-plugin-ribbon"></a>
 </p>
 
 -  Document: [moefy-vuepress](https://moefyit.github.io/moefy-vuepress/)
