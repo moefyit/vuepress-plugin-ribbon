@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/moefyit/vuepress-plugin-ribbon/issues"
   },
-  "homepage": "https://github.com/moefyit/vuepress-plugin-ribbon#readme"
+  "homepage": "https://github.com/moefyit/vuepress-plugin-ribbon#readme",
+  "dependencies": {
+    "@moefy-canvas/theme-ribbon": "^0.1.2"
+  }
 }
