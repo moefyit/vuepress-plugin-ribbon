@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/moefyit/vuepress-plugin-ribbon#readme",
   "dependencies": {
-    "@moefy-canvas/theme-ribbon": "^0.3.0"
+    "@moefy-canvas/theme-ribbon": "^0.3.1"
   }
 }
